@@ -17,7 +17,7 @@ export const defaultRouter = [
   {
     path: '/',
     component: Header,
-    redirect: '/home',
+    redirect: '/main',
     children: [
       {
         path: '/home',
@@ -62,6 +62,12 @@ export const defaultRouter = [
         name: 'SharedElementDetail'
       }
     ]
+  },
+  {
+    path: '/main',
+    component: () => import('@/views/Main'),
+    name: 'Main',
+    meta: { title: 'Main' }
   }
 ]
 
