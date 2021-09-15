@@ -3,7 +3,7 @@
     <router-view/>
     <div id="menu">
       <circle-menu type="middle-around" :number="4" animate="animated jello" mask='white' circle>
-        <button type="button" slot="item_btn">+</button>
+        <a type="button" slot="item_btn">+</a>
         <a slot="item_1" class="fa fa-twitter fa-lg">1</a>
         <a slot="item_2" class="fa fa-weixin fa-lg">2</a>
         <a slot="item_3" class="fa fa-weibo fa-lg">3</a>
@@ -15,12 +15,16 @@
 
 <script>
 import Vue from 'vue'
-import Vuetify from '@/plugins/vuetify'
 import CircleMenu from 'vue-circle-menu'
 import { getComponents } from '@/utils/utils'
+import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 
-Vue.use(Vuetify)
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
+
 Vue.component('CircleMenu', CircleMenu)
+Vue.use(BootstrapVue)
+Vue.use(IconsPlugin)
 
 getComponents((componentName, componentConfig) => {
   Vue.component(
