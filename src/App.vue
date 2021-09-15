@@ -3,11 +3,11 @@
     <router-view/>
     <div id="menu">
       <circle-menu type="middle-around" :number="4" animate="animated jello" mask='white' circle>
-        <a type="button" slot="item_btn">+</a>
-        <a slot="item_1" class="fa fa-twitter fa-lg">1</a>
-        <a slot="item_2" class="fa fa-weixin fa-lg">2</a>
-        <a slot="item_3" class="fa fa-weibo fa-lg">3</a>
-        <a slot="item_4" class="fa fa-github fa-lg">4</a>
+        <i class="fa fa-bars" slot="item_btn"></i>
+        <a slot="item_1" class="fa fa-twitter fa-lg"></a>
+        <a slot="item_2" class="fa fa-weixin fa-lg"></a>
+        <a slot="item_3" class="fa fa-weibo fa-lg"></a>
+        <a slot="item_4" class="fa fa-github fa-lg"></a>
       </circle-menu>
     </div>
   </div>
